@@ -84,21 +84,22 @@
 
 /////////////////////
 
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
 
-const App = () => {
-  const [arr, setarr] = useState([10,20,30])
-  const clicked=()=>{
-    // setarr(prev=>{const newarr=[...prev]; newarr[0]=50; return newarr;}) // for changing only one element !!
-    setarr([50,60,70])
-  }
-  return (
-    <div>
-      <h1>{arr}</h1>
-      <button onClick={clicked} className='btn'>click</button>
-    </div>
-  )
-}
+// const App = () => {
+//   const [arr, setarr] = useState([10,20,30])
+//   const clicked=()=>{
+//     // setarr(prev=>{const newarr=[...prev]; newarr[0]=50; return newarr;}) // for changing only one element !!
+//     setarr([50,60,70])
+//   }
+//   return (
+//     <div>
+//       <h1>{arr}</h1>
+//       <button onClick={clicked} className='btn'>click</button>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
