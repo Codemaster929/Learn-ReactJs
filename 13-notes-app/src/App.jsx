@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import stickyNotes from './assets/notepad_no_bg.png'
 
 const App = () => {
 
@@ -62,19 +63,22 @@ const App = () => {
         </form>
         <div className="bg-gray-900 p-10 h-full lg:w-1/2 rounded lg:border-l-white border-l-2 ">
           <h1 className='text-white text-3xl  px-2 py-2 font-bold mb-2'>Recent Notes</h1>
-          <div 
-          className='flex p-5 flex-wrap h-[82vh] w-full gap-7 scroll-auto overflow-auto  justify-center  [&::-webkit-scrollbar] :hidden '
+          <div
+            className='flex p-5 flex-wrap h-[82vh] w-full gap-7 scroll-auto overflow-auto  justify-center  [&::-webkit-scrollbar] :hidden '
           >
-            <div>
-              <img src="/home/sahajasim/Downloads/sticky_note_sticker.png" alt="" />
-            </div>
-            {task.map((element,key) => {
+
+            {task.map((element, key) => {
               return (
-              <div key={key} className="h-50 w-40 bg-white p-2 rounded ">
-                <h1 className='font-bold px-2 h-10'>{element.title}</h1>
-                <p className='h-37 px-2 text-gray-500 overflow-auto  [&::-webkit-scrollbar]:hidden '>{element.details}</p>
-              </div>
-               )
+                <div key={key} className="h-60 w-50 rounded relative ">
+                  <img src={stickyNotes} alt=""
+                  className='h-60 w-50 ' />
+                  <div className='h-60 w-50 absolute top-0 '>
+                    <h1 className=' h-10 w-45  mt-10 ml-2 font-bold text-red-600  overflow-auto scroll-auto [&::-webkit-scrollbar]:hidden '>{element.title}</h1>
+                    <p className='h-39 w-45  ml-2 text-gray-700 [&::-webkit-scrollbar]:hidden  overflow-auto scroll-auto'>{element.details}</p>
+                  </div>
+
+                </div>
+              )
             })}
 
           </div>
@@ -88,3 +92,5 @@ const App = () => {
 }
 
 export default App
+
+
