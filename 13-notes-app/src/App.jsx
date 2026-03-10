@@ -30,6 +30,12 @@ const App = () => {
     settitle(val)
   }
 
+  const deletionNote=(index)=>{
+ const copytask =[...task];
+ copytask.splice(index,1);
+ settask(copytask)
+ 
+  }
 
 
   return (
@@ -67,14 +73,22 @@ const App = () => {
             className='flex p-5 flex-wrap h-[82vh] w-full gap-7 scroll-auto overflow-auto  justify-center  [&::-webkit-scrollbar] :hidden '
           >
 
-            {task.map((element, key) => {
+            {task.map((element, index) => {
               return (
-                <div key={key} className="h-60 w-50 rounded relative ">
+                <div  key={index}  className="h-70 w-60 rounded relative ">
                   <img src={stickyNotes} alt=""
-                  className='h-60 w-50 ' />
-                  <div className='h-60 w-50 absolute top-0 '>
-                    <h1 className=' h-10 w-45  mt-10 ml-2 font-bold text-red-600  overflow-auto scroll-auto [&::-webkit-scrollbar]:hidden '>{element.title}</h1>
-                    <p className='h-39 w-45  ml-2 text-gray-700 [&::-webkit-scrollbar]:hidden  overflow-auto scroll-auto'>{element.details}</p>
+                    className='h-70 w-60 ' />
+                  <div className='h-70 w-60 absolute top-0 '>
+                    <h1 className=' h-10 w-55  mt-11 ml-2 font-bold text-2xl text-gray-900  overflow-auto scroll-auto [&::-webkit-scrollbar]:hidden '>{element.title}</h1>
+                    <p className='h-39 w-55  ml-2 text-gray-700 [&::-webkit-scrollbar]:hidden  overflow-auto scroll-auto'>{element.details}</p>
+                    <button 
+                    onClick={()=>{
+                      deletionNote(index)
+                      console.log(index);
+                      
+
+                    }}
+                    className='h-8.5 bg-red-500 rounded px-7 py-1 text-white font-bold ml-15 '>Delete</button>
                   </div>
 
                 </div>
