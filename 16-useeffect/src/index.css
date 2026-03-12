@@ -1,0 +1,12 @@
+body{
+  background-color: #111;
+  color: #fff;
+}
+button{
+  height: 50px;
+  width: 150px;
+}
+#btnArea{
+  display: flex ;
+  gap: 10px;
+}
