@@ -8,6 +8,10 @@ import Product from './pages/Product'
 import Notfound from './pages/Notfound'
 import Men from './pages/Men'
 import Women from './pages/Women'
+import Kids from './pages/Kids'
+import Courses from './pages/Courses'
+import coursedetails from './pages/Coursedetails'
+import Coursedetails from './pages/Coursedetails'
 const App = () => {
   return (
     <div>
@@ -15,10 +19,14 @@ const App = () => {
 <Routes>
   <Route path='/' element={<Home/>}></Route>
   <Route path='/about' element={<About/>}></Route>
+  <Route path='/courses' element={<Courses/>}></Route>
+<Route path='/courses/:id' element={<Coursedetails/>}></Route>
   <Route path='/product' element={<Product/>}>
     <Route path='men' element={<Men/>}></Route>
   <Route path='women' element={<Women/>}></Route>
+  <Route path='kids' element={<Kids/>}></Route>
   </Route>
+
   <Route path='*' element={<Notfound/>}></Route>
  
   </Routes>    
