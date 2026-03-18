@@ -12,10 +12,12 @@ import Kids from './pages/Kids'
 import Courses from './pages/Courses'
 import coursedetails from './pages/Coursedetails'
 import Coursedetails from './pages/Coursedetails'
+import Navbar2 from './components/Navbar2'
 const App = () => {
   return (
     <div>
       <Navbar/>
+      <Navbar2/>
 <Routes>
   <Route path='/' element={<Home/>}></Route>
   <Route path='/about' element={<About/>}></Route>
